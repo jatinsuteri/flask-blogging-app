@@ -24,8 +24,9 @@ body {
     font-weight: 500;
   }
 
-  .site-header .navbar-nav .right{
+  .site-header .navbar-nav .right {
     padding-right: 100px;
+    
   }
   
   .content-section {

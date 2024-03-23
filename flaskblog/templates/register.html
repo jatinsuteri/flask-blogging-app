@@ -8,7 +8,7 @@
                 <div class="form-group">
                     {{ form.username.label(class="form-control-label")}}
                     
-                    {%if form.username.eirrors%}
+                    {%if form.username.errors%}
                         {{ form.username(class="form-control form-control-lg is-invalid")}}
                         <div class="invalid-feedback">
                             {%for error in form.username.errors%}
