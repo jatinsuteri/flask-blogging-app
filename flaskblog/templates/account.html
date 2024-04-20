@@ -11,7 +11,7 @@
     </div>
 
     
-      <form method="post" action="">
+      <form method="post" action="" enctype="multipart/form-data">
       {{ form.hidden_tag()}}
       <fieldset class="form-group"><br>
           <legend class="border-bottom mb-4">Account Info</legend>
@@ -45,6 +45,16 @@
               {%endif%}
           </div>
       </fieldset><br>
+      <div class="form-group">
+        {{ form.picture.label()}}
+        {{form.picture(class = "form-control-file")}}
+        {%if form.picture.error%}
+            {%for error in form.email.errors%}
+                <span class = 'text-danger'>{{error}}</span>
+            {%endfor%}
+        {%endif%}
+        </div>
+        
       <div class="form-group">
           {{ form.submit(class="btn btn-outline-info") }}
       </div><br>
